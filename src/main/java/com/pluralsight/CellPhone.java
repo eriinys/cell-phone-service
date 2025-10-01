@@ -17,11 +17,6 @@ public class CellPhone {
         this.owner = "";
     }
 
-    public CellPhone(int serialNumber, String phoneNumber) {
-        setSerialNumber(serialNumber);
-        setPhoneNumber(phoneNumber);
-    }
-
     public int getSerialNumber() {
         return serialNumber;
     }
@@ -29,7 +24,7 @@ public class CellPhone {
         this.serialNumber = serialNumber;
     }
 
-    public String getPhoneNumber(String phoneNumber) {
+    public String getPhoneNumber() {
         return  phoneNumber;
     }
     public void setPhoneNumber(String phoneNumber) {
