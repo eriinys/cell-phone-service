@@ -8,7 +8,7 @@ public class CellPhone {
     private String phoneNumber;
     private  String owner;
 
-    //parameterless constructor
+    //parameterless constructor`
     public CellPhone() {
         this.serialNumber = 0;
         this.model = "";
@@ -17,6 +17,22 @@ public class CellPhone {
         this.owner = "";
     }
 
+    public CellPhone (String owner, String phoneNumber) {
+        this.owner = owner;
+        this.phoneNumber = phoneNumber ;
+    }
+    //ADDING THE DIAL METHOD
+    public void dial (CellPhone targetPhone) {
+        String caller = (this.owner != null && !this.owner.isBlank())
+                ? this.owner + "'s phone"
+                : this.phoneNumber;
+        String receiver = (targetPhone.getOwner() != null && !targetPhone.getOwner().isBlank())
+                ? targetPhone.getOwner() + "'s phone"
+                : targetPhone.getPhoneNumber();
+        System.out.printf("\n%s is calling %s%n", caller, receiver);
+    }
+
+    //region getters
     public int getSerialNumber() {
         return serialNumber;
     }
@@ -51,6 +67,7 @@ public class CellPhone {
     public void setOwner(String owner) {
         this.owner = owner;
     }
+    //endregion
 
 }
 
